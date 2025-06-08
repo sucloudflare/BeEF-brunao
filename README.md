@@ -49,22 +49,6 @@ Exemplo de módulo para executar comandos via Metasploit a partir do BeEF e obte
 
 
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BeEF - Browser Exploitation Framework - Guia Completo</title>
-<style>
-  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; max-width: 900px; }
-  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
-  code { font-family: monospace; }
-  h1, h2, h3 { color: #333; }
-  a { color: #0077cc; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-</style>
-</head>
-<body>
 
 <h1>BeEF - Browser Exploitation Framework</h1>
 
