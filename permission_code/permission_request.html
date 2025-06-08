@@ -1,0 +1,36 @@
+<!-- permission_code/permission_request.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste de Permissões do Navegador</title>
+</head>
+<body>
+  <h1>Solicitação de Permissões</h1>
+  <button id="requestPermissionsBtn">Pedir Permissões</button>
+
+  <script>
+    document.getElementById('requestPermissionsBtn').addEventListener('click', function() {
+      // Pede acesso à câmera e microfone
+      navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+        .then(stream => {
+          alert('Permissão concedida para câmera e microfone');
+          stream.getTracks().forEach(track => track.stop());
+        })
+        .catch(err => alert('Permissão negada para câmera e microfone: ' + err.message));
+
+      // Pede acesso à captura de tela
+      if (navigator.mediaDevices.getDisplayMedia) {
+        navigator.mediaDevices.getDisplayMedia({ video: true })
+          .then(screenStream => {
+            alert('Permissão concedida para captura de tela');
+            screenStream.getTracks().forEach(track => track.stop());
+          })
+          .catch(err => alert('Permissão negada para captura de tela: ' + err.message));
+      } else {
+        alert('Captura de tela não suportada neste navegador.');
+      }
+    });
+  </script>
+</body>
+</html>
